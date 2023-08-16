@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@drawable/score"
+        android:layout_width="340dp"
+        android:layout_height="460dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="130dp"
+            android:id="@+id/starLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+<!--            <ImageView-->
+<!--                android:src="@drawable/star"-->
+<!--                android:layout_width="55dp"-->
+<!--                android:layout_height="55dp"/>-->
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/scores"
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/BasicText"
+            android:textSize="50sp"
+            tools:text="1239"/>
+        
+        <com.fall.game.core.library.CustomImageButton
+            android:id="@+id/playAgain"
+            android:layout_marginTop="65dp"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:src="@drawable/play_again"/>
+
+    </LinearLayout>
+
+    <com.fall.game.core.library.CustomImageButton
+        android:id="@+id/close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="end"
+        android:src="@drawable/close"/>
+
+</FrameLayout>

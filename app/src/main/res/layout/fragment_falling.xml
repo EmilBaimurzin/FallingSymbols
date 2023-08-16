@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background01"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/symbolsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:id="@+id/playerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <ImageView
+            android:id="@+id/player"
+            android:src="@drawable/background02"
+            android:layout_width="120dp"
+            android:layout_height="120dp"/>
+        
+    </FrameLayout>
+
+    <com.fall.game.core.library.CustomImageButton
+        android:id="@+id/home"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/home"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.fall.game.core.library.CustomImageButton
+        android:id="@+id/settings"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/setting02"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scores"
+        style="@style/BasicText"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/score01"
+        android:fontFamily="@font/titan_one"
+        android:textColor="#883A14"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@+id/home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/home"
+        tools:text="1200" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/livesLayout"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scores" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

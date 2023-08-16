@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background01"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="-20dp"
+        android:src="@drawable/background03"
+        app:layout_constraintBottom_toTopOf="@+id/setings"
+        app:layout_constraintEnd_toEndOf="@+id/setings"
+        app:layout_constraintStart_toStartOf="@+id/setings" />
+
+    <LinearLayout
+        android:id="@+id/setings"
+        android:gravity="center_horizontal"
+        android:layout_width="320dp"
+        android:paddingTop="140dp"
+        android:layout_height="430dp"
+        android:orientation="vertical"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/setting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+            android:id="@+id/easy"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:src="@drawable/easy"/>
+
+
+        <ImageView
+            android:id="@+id/medium"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:layout_marginVertical="20dp"
+            android:src="@drawable/medium02"/>
+
+        <ImageView
+            android:id="@+id/hard"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:src="@drawable/hard02"/>
+
+        <com.fall.game.core.library.CustomImageButton
+            android:id="@+id/save"
+            android:layout_marginTop="15dp"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:src="@drawable/save"/>
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/foreground2"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/background02"
+        android:layout_marginBottom="-40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

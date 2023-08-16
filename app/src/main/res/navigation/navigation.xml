@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentMain">
+
+    <fragment
+        android:id="@+id/fragmentMain"
+        android:name="com.fall.game.ui.one.FragmentOne"
+        android:label="FragmentMain" >
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentFalling"
+            app:destination="@id/fragmentFalling" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentFalling"
+        android:name="com.fall.game.ui.falling.FragmentFalling"
+        android:label="FragmentFalling" >
+        <action
+            android:id="@+id/action_fragmentFalling_to_dialogEnd"
+            app:destination="@id/dialogEnd" />
+        <action
+            android:id="@+id/action_fragmentFalling_to_fragmentSettings"
+            app:destination="@id/fragmentSettings" />
+        <argument
+            android:name="isNew"
+            app:argType="boolean" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogEnd"
+        android:name="com.fall.game.ui.dialogs.DialogEnd"
+        android:label="DialogEnd" >
+        <argument
+            android:name="scores"
+            app:argType="integer" />
+    </dialog>
+    <fragment
+        android:id="@+id/fragmentSettings"
+        android:name="com.fall.game.ui.settings.FragmentSettings"
+        android:label="FragmentSettings" />
+</navigation>
